@@ -19,6 +19,7 @@ body {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
 }
 
 .grid-item {
@@ -26,4 +27,27 @@ body {
     height: 100%;
     background-color: #3498db;
     border-radius: 8px;
+    position: relative;
+    font-size: 400%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotate {
+    animation: rotateAnimation 0.5s forwards;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(90deg);
+        background-color: #fff;
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
 }
