@@ -1,6 +1,5 @@
 let prochainJoueur = 'X';
 const joueurSuivant = document.getElementById('joueur'); 
-
 let grilleActuelle = [];
 
 async function nouvellePartie() {
@@ -47,3 +46,20 @@ function actualiserGrille() {
         document.getElementById(i).innerText = grilleActuelle[i];
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const spanNumeroPartie = document.getElementById("numeroPartie");
+    const gridContainer = document.getElementById("grid");
+
+    if (spanNumeroPartie.innerText === "") {
+        gridContainer.style.display = "none";
+    }
+
+    spanNumeroPartie.addEventListener("DOMSubtreeModified", function() {
+        if (spanNumeroPartie.innerText === "") {
+            gridContainer.style.display = "none";
+        } else {
+            gridContainer.style.display = "grid";
+        }
+    });
+});
