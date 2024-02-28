@@ -8,17 +8,20 @@
 </head>
 <body>
     <div class="center">
+        <button onclick="nouvellePartie()">Nouvelle Partie</button>
+        <div class="bloc-partie"> Partie n° <span class="bloc-valeur" id="numeroPartie">1</span></div>
         <div class="grid-container" id="grid">
-            <div class="grid-item" onclick="tileClicked(this)"></div>
-            <div class="grid-item" onclick="tileClicked(this)"></div>
-            <div class="grid-item" onclick="tileClicked(this)"></div>
-            <div class="grid-item" onclick="tileClicked(this)"></div>
-            <div class="grid-item" onclick="tileClicked(this)"></div>
-            <div class="grid-item" onclick="tileClicked(this)"></div>
-            <div class="grid-item" onclick="tileClicked(this)"></div>
-            <div class="grid-item" onclick="tileClicked(this)"></div>
-            <div class="grid-item" onclick="tileClicked(this)"></div>
+            <div class="grid-item" onclick="envoyerTour(this)" id="0"></div>
+            <div class="grid-item" onclick="envoyerTour(this)" id="1"></div>
+            <div class="grid-item" onclick="envoyerTour(this)" id="2"></div>
+            <div class="grid-item" onclick="envoyerTour(this)" id="3"></div>
+            <div class="grid-item" onclick="envoyerTour(this)" id="4"></div>
+            <div class="grid-item" onclick="envoyerTour(this)" id="5"></div>
+            <div class="grid-item" onclick="envoyerTour(this)" id="6"></div>
+            <div class="grid-item" onclick="envoyerTour(this)" id="7"></div>
+            <div class="grid-item" onclick="envoyerTour(this)" id="8"></div>
         </div>
+        <div class="bloc-joueur">Joueur suivant: <span class="bloc-valeur" id="joueur">X</span></div>
     </div>
     <script src="script.js"></script>
 </body>

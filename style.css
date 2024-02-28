@@ -35,6 +35,10 @@ body {
     align-items: center;
 }
 
+.grid-item:hover {
+    background-color: #21608a;
+}
+
 .rotate {
     animation: rotateAnimation 0.5s forwards;
 }
@@ -51,3 +55,31 @@ body {
         transform: rotateY(0deg);
     }
 }
+
+button {
+    background-color: #21608a; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+
+.bloc-valeur {
+    font-size: 24px;
+    font-weight: bold; 
+    margin-top: 10px; 
+}
+
+.bloc-partie, .bloc-joueur {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
