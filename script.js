@@ -9,6 +9,8 @@ async function nouvellePartie() {
     document.getElementById('numeroPartie').textContent = numPartie;
     grilleActuelle = await demanderGrille();
     actualiserGrille();
+    prochainJoueur = 'X';
+    joueurSuivant.textContent = prochainJoueur;
 }
 
 async function demanderGrille() {
@@ -34,9 +36,11 @@ async function envoyerTour(item) {
         actualiserGrille();
         grilleActuelle = await demanderGrille();
         item.classList.add('rotate');
+
         item.innerText = prochainJoueur;
-        joueurSuivant.textContent = prochainJoueur;
         prochainJoueur = prochainJoueur === 'X' ? 'O' : 'X';
+        joueurSuivant.textContent = prochainJoueur;
+        
         
     }
 }
