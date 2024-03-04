@@ -3,7 +3,7 @@ const joueurSuivant = document.getElementById('joueur');
 let grilleActuelle = [];
 
 async function nouvellePartie() {
-    const reponse = await fetch("http://localhost:8080/api/partie/new");
+    const reponse = await fetch("http://localhost:8080/api/partie", {method: 'POST', headers: { 'Content-Type': 'application/json' }});
     const numPartie = await reponse.json();
     console.log("nouvelle partie : " + numPartie);
     document.getElementById('numeroPartie').textContent = numPartie;
